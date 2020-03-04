@@ -56,7 +56,7 @@ public class CategoriaDao {
             return false;
         }
     }
-    public boolean delete(Categoria categoria){
+    public boolean excluir(Categoria categoria){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         try{
