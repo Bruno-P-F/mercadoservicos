@@ -5,7 +5,7 @@ import java.util.List;
 import org.hibernate.Session;
 public class CategoriaDao {
     public List<Categoria> listar(){
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         try{
             List<Categoria> categorias=session.createQuery("from Categoria order by descricao").list();

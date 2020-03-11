@@ -7,9 +7,14 @@
         <title>Mercado de Servicos</title>
     </h:head>
     <h:body>
-        <h:form>
-            <h:commandLink action="private/cadastros/categoria/list.xhtml" value="Categorias"/>
-        </h:form>
+        <h1>Categorias</h1>
+        <p:dataTable value="#{categoriaMB.categorias}" var="categoria"
+                     emptyMessage="Nenhum Registro encontrado">
+            <p:column headerText="Descricao">
+                #{categoria.descricao}
+            </p:column>
+        </p:dataTable>
+        <p:commandButton value="Novo" action="#{categoriaMB.novo()}"/>
     </h:body>
 </html>
 

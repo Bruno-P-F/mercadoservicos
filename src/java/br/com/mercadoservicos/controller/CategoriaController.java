@@ -10,7 +10,7 @@ public class CategoriaController {
     private Integer id;
     private String descricao;
     private List<Categoria> categorias;
-    private CategoriaService categoriaService;
+    private CategoriaService categoriaService = new CategoriaService();
     public CategoriaController() {
         listar();
     }
@@ -20,7 +20,7 @@ public class CategoriaController {
     public String novo(){
         return "private/cadastros/categoria/new.xhtml?faces-redirect=true";
     }
-    public String cancelarr(){
+    public String cancelar(){
         return "private/cadastros/categoria/list.xhtml?faces-redirect=true";
     }
     public Integer getId() {
